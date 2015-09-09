@@ -218,9 +218,7 @@ class Buffers
   {
     //grow if not enough space
     ByteBuffer b = get(t);
-    //  System.out.println("Grow " + t + " : " + b + " size=" + size);
     if (b.position() + size > b.capacity()) {
-    //  System.out.println("Grow");
       resetSize(t, b.limit() + size);
     }
     return get(t);
